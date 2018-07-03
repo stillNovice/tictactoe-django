@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Welcome {{ user.username }}</h1>
+      <ul>
+        {% for game in active_games %}
+        <li>{{ game.id }}: {{ game.first_player }} vs {{ game.second_player }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
